@@ -1,9 +1,16 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="JsBarcode.all.min.js"></script>
+    <title> Barcodes Generator</title>
+  </head>
 <body>
+  <br>
    <div class="container">
       <div class="col-md-6 mx-auto text-center">
          <div class="header-title">
@@ -13,6 +20,7 @@
          </div>
       </div>
    </div>
+   <br>
     <div class="cotainer">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -21,32 +29,11 @@
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#barcodeModal">New Barcode</button>
                     </div>
                     <div class="card-body">
-                        <table class="table table-sm">
-                          <thead>
-                            <tr>
-                              <th scope="col">#</th>
-                              <th scope="col">Prodcut Name</th>
-                              <th scope="col">Barcode</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                            </tr>
-                          </tbody>
-                        </table>
+
+                      <?php 
+                        require "tableBarcode.php";
+                      ?>
+
                     </div>
                 </div>
             </div>
@@ -62,10 +49,10 @@
                         </button>
                     </div>
                 <div class="modal-body">
-                    <form action="php/insert.php" method="POST">
+                    <form action="php/insert.php" method="post">
                       <div class="form-group">
                         <label for="recipient-name" class="col-form-label" required>Product name:</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" name="name" maxlength="20" required>
                       </div>
                       <hr>
                       <button type="submit" class="btn btn-primary">Generate barcode</button>
@@ -74,4 +61,7 @@
             </div>
         </div>
     </div>
-</body>
+    <!--Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

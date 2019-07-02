@@ -1,5 +1,8 @@
 Barcodes Generator Using PHP, MySQL and JsBarcode library.
 
+
+
+
 A bar code (often seen as a single word, barcode) is the small image of lines (bars) and spaces that is affixed to retail store items, identification cards, and postal mail to identify a particular product number, person, or location. ... A barcode reader is used to read the code.
 
 This application shows up how easy it is to generate barcodes using php and JsBarcode library, here you can generate barcodes by just providing a product name. The barcodes are generated using the combination of product name and the time (minutes and seconds) in which the product name is stored on the database in order to avoid barcodes duplication.

@@ -11,7 +11,7 @@
 	// get the last id
 	$id=mysqli_insert_id($connection);
 
-	// millisecond
+	//Combide id with current minute and second
 	$code=$id.date('is');
 
 	$sql="UPDATE tbl_products SET code='$code' WHERE product_id='$id'";

@@ -34,7 +34,7 @@
                       $sql="SELECT * FROM tbl_products";
                       $result=mysqli_query($connection,$sql);
 
-                          //declaramos arreglo para guardar codigos
+                      // Where all the code are store.
                       $arrayBarcodes=array();
                       ?>
 

@@ -7,7 +7,7 @@ A bar code (often seen as a single word, barcode) is the small image of lines (b
 
 This application shows up how easy it is to generate barcodes using php and JsBarcode library, here you can generate barcodes by just providing a product name. The barcodes are generated using the combination of product name and the time (minutes and seconds) in which the product name is stored on the database in order to avoid barcodes duplication.
 
-Once the generate barcode button is pressed the product name is stored on a MySQL database named egm_barcodes altogether with an id, code and datetime.
+Once the generate barcode button is pressed the product name is stored on a MySQL database named egm_barcodes altogether with an id, code (generated from id and the milisecond from the time created) and datetime.
 The barcodes table reloads automatically displaying all the barcodes generated so far. You can generate as much barcodes as you want.
 
 Demo

@@ -1,5 +1,5 @@
 <?php 
-	// connect to the egm_barcodes database.
+	//connect to the egm_barcodes database.
 	$connection=mysqli_connect('localhost','root','','egm_barcodes');
 	
 	$name=$_POST['name'];
@@ -8,7 +8,7 @@
 
 	$result=mysqli_query($connection,$sql);
 
-	// get the last id
+	//get the last id
 	$id=mysqli_insert_id($connection);
 
 	//Combide id with current minute and second
@@ -18,6 +18,6 @@
 
 	$result=mysqli_query($connection,$sql);
 
-	// redirecto to index.php
+	//redirecto to index.php
 	header("Location:../index.php");
  ?>

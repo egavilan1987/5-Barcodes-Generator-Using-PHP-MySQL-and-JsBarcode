@@ -43,14 +43,10 @@
                 <div class="col-sm-12">
                   <table class="table table-sm">
                     <tr>
-                      <th scope="col">#
-                      </th>
-                      <th scope="col">Prodcut Name
-                      </th>
-                      <th scope="col">Barcode
-                      </th>
-                      <th scope="col">Created Date
-                      </th>
+                      <th scope="col">#</th>
+                      <th scope="col">Prodcut Name</th>
+                      <th scope="col">Barcode</th>
+                      <th scope="col">Created Date</th>
                     </tr>
                     <?php 
                       //get back rows of results
@@ -58,18 +54,12 @@
                       $arrayBarcodes[]=(string)$row[2]; 
                     ?>
                     <tr>
-                      <td>
-                        <?php echo $row[0] ?>
-                      </td>
-                      <td>
-                        <?php echo $row[1] ?>
-                      </td>
+                      <td><?php echo $row[0] ?></td>
+                      <td><?php echo $row[1] ?></td>
                       <td>
                         <svg id='<?php echo "barcode".$row[2]; ?>'>
-                          </td>
-                      <td>
-                        <?php echo $row[3] ?>
                       </td>
+                      <td><?php echo $row[3] ?></td>
                     </tr>
                     <?php endwhile; ?>
                   </table>
@@ -86,7 +76,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New barcode
+            <h5 class="modal-title" id="barcodeModalLabel">New barcode
             </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;

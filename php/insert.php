@@ -10,7 +10,6 @@
 
 	//get the last id
 	$id=mysqli_insert_id($connection);
-
 	//Combine id with current minute and second
 	$code=$id.date('is');
 
@@ -21,3 +20,5 @@
 	//redirect to index.php
 	header("Location:../index.php");
  ?>
+
+
